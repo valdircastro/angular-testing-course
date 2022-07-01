@@ -23,4 +23,21 @@ fdescribe('Async Testing Examples', () => {
       expect(test).toBeTruthy();
     })
   );
+
+  fit('Asynchronous test example - plain Promise()', () => {
+    let test = false;
+
+    console.log('Creating a promise');
+
+    Promise.resolve().then(() => {
+      console.log('Promise first then() evaluated successfully');
+      Promise.resolve().then(() => {
+        console.log('Promise second then() evaluated successfully');
+        test = true;
+      });
+    });
+
+    console.log('Running test assertions');
+    expect(test).toBeTruthy();
+  });
 });
