@@ -2,7 +2,7 @@ import {fakeAsync, flush, flushMicrotasks, tick} from '@angular/core/testing';
 import {of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 
-fdescribe('Async Testing Examples', () => {
+describe('Async Testing Examples', () => {
   it('Asynchronous test examples with Jasmine done()', (done) => {
     let test = false;
 
